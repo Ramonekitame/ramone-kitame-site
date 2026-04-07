@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RAMONE KITAME</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+</head>
+
+<body>
+
+<div id="intro">
+  <img src="enter.png" class="enter-img">
+</div>
+
+<div id="main-content">
+
+  <nav>
+  <div>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="works.html">WORKS</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+</nav>
+
+  <section class="hero">
+    <img src="logo.png">
+    <h1>RAMONE KITAME</h1>
+  </section>
+
+</div>
+
+<script>
+  const intro = document.getElementById("intro");
+  const img = document.querySelector(".enter-img");
+
+  if (!sessionStorage.getItem("visited")) {
+    intro.style.display = "flex";
+  } else {
+    intro.style.display = "none";
+  }
+
+  intro.addEventListener("click", () => {
+    img.classList.add("enter-active");
+
+    setTimeout(() => {
+      intro.classList.add("hidden");
+      sessionStorage.setItem("visited", "true");
+    }, 300);
+  });
+</script>
+</body>
+</html>
