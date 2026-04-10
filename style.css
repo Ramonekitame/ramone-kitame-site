@@ -37,7 +37,7 @@ nav a {
   justify-content: center; /* CENTRA VERTICALMENTE */
   align-items: center;
 
-  padding: 0; /* togliamo quel padding-top che ti sballa tutto */
+  padding-top: 10px; /* togliamo quel padding-top che ti sballa tutto */
 }
 
 .hero img {
@@ -50,8 +50,8 @@ nav a {
 .hero h1 {
   font-size: 90px;
   text-align: center;
-  margin-top: 20px;
-  letter-spacing: 8px
+  margin-top: 10px;
+  white-space: nowrap;
 }
 
 /* RESTO UGUALE */
@@ -205,6 +205,10 @@ section {
   padding-top: 80px;
 }
 
+.contact-logo {
+  width: 150px;
+  margin-bottom: 40px;
+}
 /* MOBILE */
 
 @media (max-width: 768px) {
@@ -250,6 +254,7 @@ section {
 
   .hero {
   min-height: 100vh;
+  padding-top: 10px;
   justify-content: center;
  }
 
@@ -269,4 +274,10 @@ section {
   }
 
 }
-
+.hero h1 {
+  font-size: 40px;
+  white-space: normal;
+}
+.contact-logo {
+  width: 120px;
+}
