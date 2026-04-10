@@ -30,24 +30,28 @@ nav a {
 
 /* 🔥 HERO FIXATA */
 .hero {
+  min-height: 100vh;
+
   display: flex;
   flex-direction: column;
+  justify-content: center; /* CENTRA VERTICALMENTE */
   align-items: center;
-  justify-content: flex-start;
 
-  padding-top: 40px; /* PRIMA ERA TROPPO BASSO */
+  padding: 0; /* togliamo quel padding-top che ti sballa tutto */
 }
 
 .hero img {
-  width: 450px; /* DIMENSIONE GIUSTA */
+  width: 800px; /* DIMENSIONE GIUSTA */
   display: block;
   margin: 0 auto;
+  max-width: 90%;
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 90px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
+  letter-spacing: 8px
 }
 
 /* RESTO UGUALE */
@@ -60,17 +64,17 @@ nav a {
 }
 
 .about h1 {
-  letter-spacing: 4px;
-  margin-bottom: 40px;
+  font-size: 70px;
+  letter-spacing: 6px;
 }
 
 .about p {
-  margin-bottom: 20px;
-  line-height: 1.6;
+  font-size: 22px;
+  line-height: 1.8;
 }
 
 .contact {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,9 +84,9 @@ nav a {
 }
 
 .contact h1 {
-  letter-spacing: 4px;
+  letter-spacing: 6px;
   margin-bottom: 40px;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .contact-text {
@@ -91,7 +95,7 @@ nav a {
 }
 
 .email {
-  font-size: 18px;
+  font-size: 30px;
   letter-spacing: 2px;
 }
 
@@ -103,6 +107,7 @@ nav a {
 .works h1 {
   letter-spacing: 4px;
   margin-bottom: 60px;
+font-size: 70px;
 }
 
 .works-grid {
@@ -118,10 +123,9 @@ nav a {
 }
 
 .work-item img {
-  width: 500px;
-  height: 500px;
-  object-fit: cover;
-  transition: 0.4s ease;
+  width: 800px;
+  height: 800px;
+  max-width: 90%;
 }
 
 .work-item img:hover {
@@ -130,9 +134,8 @@ nav a {
 }
 
 .work-item p {
-  margin-top: 40px;
-  letter-spacing: 3px;
-  font-size: 30px;
+  font-size: 42px;
+  letter-spacing: 4px;
 }
 
 .work-item:first-child p {
@@ -206,6 +209,34 @@ section {
 
 @media (max-width: 768px) {
 
+  .contact {
+  padding: 40px 20px;
+}
+
+.contact h1 {
+  font-size: 50px;
+  letter-spacing: 4px;
+}
+
+.contact-text {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.email {
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.socials {
+  flex-direction: column;
+  gap: 15px;
+}
+
+.socials a {
+  font-size: 12px;
+}
+
   nav div {
     display: flex;
     justify-content: center;
@@ -218,16 +249,19 @@ section {
   }
 
   .hero {
-    padding-top: 20px; /* MOBILE PIÙ SU */
-  }
+  min-height: 100vh;
+  justify-content: center;
+ }
 
   .hero img {
-    width: 380px; /* MOBILE PERFETTO */
-  }
+  width: 95%;
+ }
+
 
   .hero h1 {
-    font-size: 40px;
-  }
+  font-size: 70px;
+  letter-spacing: 4px;
+}
 
   .page {
     justify-content: flex-start;
