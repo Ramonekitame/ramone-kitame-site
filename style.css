@@ -1,3 +1,220 @@
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+@font-face {
+  font-family: 'Trattatello';
+  src: url('Trattatello.ttf');
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: 'Trattatello', Arial;
+}
+
+/* NAV */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.hero img {
+  width: 800px;
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+/* 🔥 PUNTO 4 - SCRITTA SU UNA RIGA */
+.hero h1 {
+  font-size: 90px;
+  text-align: center;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+
+/* ABOUT */
+
+.about {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.about h1 {
+  font-size: 70px;
+  letter-spacing: 6px;
+}
+
+.about p {
+  font-size: 22px;
+  line-height: 1.8;
+}
+
+/* CONTACT */
+
+.contact {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.contact h1 {
+  letter-spacing: 6px;
+  margin-bottom: 40px;
+  font-size: 60px;
+}
+
+.contact-text {
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.email {
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+/* LOGO CONTACT */
+
+.contact-logo {
+  width: 150px;
+  margin-bottom: 40px;
+}
+
+/* WORKS */
+
+.works {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.works h1 {
+  letter-spacing: 4px;
+  margin-bottom: 60px;
+  font-size: 70px;
+}
+
+.works-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.work-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work-item img {
+  width: 800px;
+  height: 800px;
+  max-width: 90%;
+}
+
+.work-item img:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.work-item p {
+  font-size: 42px;
+  letter-spacing: 4px;
+}
+
+.work-item:first-child p {
+  margin-top: -30px;
+}
+
+/* INTRO */
+
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #222;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+#intro.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.enter-img {
+  width: 500px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translate(0,0) scale(1); }
+  25% { transform: translate(-15px,-20px) scale(1.03); }
+  50% { transform: translate(15px,-10px) scale(1.05); }
+  75% { transform: translate(-10px,10px) scale(1.02); }
+  100% { transform: translate(10px,0) scale(1); }
+}
+
+.enter-active {
+  animation: enterAnim 0.6s ease forwards;
+}
+
+@keyframes enterAnim {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+/* SECTION */
+
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 80px;
+}
+
+/* MOBILE */
+
 @media (max-width: 768px) {
 
   nav {
@@ -105,4 +322,3 @@
     font-size: 28px;
   }
 }
-
