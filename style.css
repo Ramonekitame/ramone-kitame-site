@@ -1,4 +1,4 @@
-hhtml {
+html {
   -webkit-text-size-adjust: 100%;
 }
 
@@ -16,34 +16,36 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px;
   position: relative;
   z-index: 10;
 }
 
+nav div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
 nav a {
   color: white;
-  margin-left: 20px;
   text-decoration: none;
 }
 
-/* 🔥 HERO FIXATA */
+/* HOME */
+
 .hero {
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
-  justify-content: center; /* CENTRA VERTICALMENTE */
+  justify-content: center;
   align-items: center;
-
-  padding-top: 10px; /* togliamo quel padding-top che ti sballa tutto */
+  padding-top: 10px;
 }
 
 .hero img {
-  width: 800px; /* DIMENSIONE GIUSTA */
-  display: block;
-  margin: 0 auto;
+  width: 800px;
   max-width: 90%;
 }
 
@@ -54,61 +56,89 @@ nav a {
   white-space: nowrap;
 }
 
-/* RESTO UGUALE */
+/* PAGINE */
 
-.about {
-  max-width: 600px;
-  margin: 100px auto;
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-  padding: 20px;
+  padding: 60px 30px;
+  box-sizing: border-box;
 }
 
-.about h1 {
+.page img,
+.page-logo {
+  width: 220px;
+  margin-bottom: 30px;
+}
+
+.page h1 {
   font-size: 70px;
   letter-spacing: 6px;
+  margin-bottom: 40px;
 }
 
-.about p {
-  font-size: 22px;
-  line-height: 1.8;
+.quote {
+  max-width: 850px;
+  width: 100%;
+  font-size: 26px;
+  line-height: 1.7;
+  letter-spacing: 2px;
+  text-align: center;
 }
+
+/* CONTACT */
 
 .contact {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 20px;
+  padding: 60px 30px;
+  box-sizing: border-box;
+}
+
+.contact-logo {
+  width: 220px;
+  margin-bottom: 30px;
 }
 
 .contact h1 {
+  font-size: 70px;
   letter-spacing: 6px;
   margin-bottom: 40px;
-  font-size: 60px;
 }
 
 .contact-text {
-  margin-bottom: 20px;
+  font-size: 22px;
   letter-spacing: 1px;
+  margin-bottom: 20px;
 }
 
 .email {
   font-size: 30px;
   letter-spacing: 2px;
+  color: white;
+  text-decoration: none;
 }
 
-.works {
-  padding: 100px 20px;
-  text-align: center;
+.socials {
+  margin-top: 40px;
 }
 
-.works h1 {
-  letter-spacing: 4px;
-  margin-bottom: 60px;
-font-size: 70px;
+.socials a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
+
+/* WORKS */
 
 .works-grid {
   display: flex;
@@ -126,20 +156,12 @@ font-size: 70px;
   width: 800px;
   height: 800px;
   max-width: 90%;
-}
-
-.work-item img:hover {
-  transform: scale(1.05);
-  opacity: 0.8;
+  object-fit: cover;
 }
 
 .work-item p {
   font-size: 42px;
   letter-spacing: 4px;
-}
-
-.work-item:first-child p {
-  margin-top: -30px;
 }
 
 /* INTRO */
@@ -151,7 +173,6 @@ font-size: 70px;
   width: 100%;
   height: 100vh;
   background: #222;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,11 +185,6 @@ font-size: 70px;
 #intro.hidden {
   opacity: 0;
   pointer-events: none;
-}
-
-#intro p {
-  letter-spacing: 6px;
-  font-size: 40px;
 }
 
 .enter-img {
@@ -193,58 +209,18 @@ font-size: 70px;
   100% { transform: scale(2); opacity: 0; }
 }
 
-/* SECTION */
-
-section {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding-top: 80px;
-}
-
-.contact-logo {
-  width: 150px;
-  margin-bottom: 40px;
-}
 /* MOBILE */
 
 @media (max-width: 768px) {
 
-  .contact {
-  padding: 40px 20px;
-}
-
-.contact h1 {
-  font-size: 50px;
-  letter-spacing: 4px;
-}
-
-.contact-text {
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-.email {
-  font-size: 30px;
-  letter-spacing: 2px;
-}
-
-.socials {
-  flex-direction: column;
-  gap: 15px;
-}
-
-.socials a {
-  font-size: 12px;
-}
+  nav {
+    justify-content: center;
+    padding: 20px 10px;
+  }
 
   nav div {
-    display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 16px;
   }
 
   nav a {
@@ -253,31 +229,81 @@ section {
   }
 
   .hero {
-  min-height: 100vh;
-  padding-top: 10px;
-  justify-content: center;
- }
+    min-height: 100vh;
+    padding-top: 0;
+    justify-content: center;
+  }
 
   .hero img {
-  width: 95%;
- }
-
+    width: 105%;
+    max-width: 420px;
+  }
 
   .hero h1 {
-  font-size: 70px;
-  letter-spacing: 4px;
-}
+    font-size: 40px;
+    white-space: normal;
+    letter-spacing: 4px;
+  }
 
   .page {
     justify-content: flex-start;
-    padding-top: 40px;
+    padding: 45px 28px;
   }
 
+  .page img,
+  .page-logo {
+    width: 230px;
+    margin-bottom: 30px;
+  }
+
+  .page h1 {
+    font-size: 48px;
+    letter-spacing: 4px;
+    margin-bottom: 35px;
+  }
+
+  .quote {
+    font-size: 23px;
+    line-height: 1.6;
+    letter-spacing: 1.5px;
+    max-width: 100%;
+  }
+
+  .contact {
+    justify-content: flex-start;
+    padding: 45px 28px;
+  }
+
+  .contact-logo {
+    width: 230px;
+    margin-bottom: 30px;
+  }
+
+  .contact h1 {
+    font-size: 48px;
+    letter-spacing: 4px;
+  }
+
+  .contact-text {
+    font-size: 16px;
+  }
+
+  .email {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .socials a {
+    font-size: 16px;
+  }
+
+  .work-item img {
+    width: 90%;
+    height: auto;
+  }
+
+  .work-item p {
+    font-size: 30px;
+  }
 }
-.hero h1 {
-  font-size: 40px;
-  white-space: normal;
-}
-.contact-logo {
-  width: 120px;
-}
+
