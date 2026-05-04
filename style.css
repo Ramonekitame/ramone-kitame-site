@@ -14,23 +14,27 @@ body {
   font-family: 'Trattatello', Arial;
 }
 
-/* NAV */
-
 nav {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: flex-start;
+  padding: 20px 30px;
   position: relative;
   z-index: 10;
 }
 
-nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
+nav div {
+  display: flex;
+  justify-content: flex-start;
+  gap: 26px;
 }
 
-/* HERO */
+nav a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+/* HOME */
 
 .hero {
   min-height: 100vh;
@@ -42,13 +46,12 @@ nav a {
 }
 
 .hero img {
-  width: 800px;
+  width: 850px;
   display: block;
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 92%;
 }
 
-/* 🔥 PUNTO 4 - SCRITTA SU UNA RIGA */
 .hero h1 {
   font-size: 90px;
   text-align: center;
@@ -56,23 +59,39 @@ nav a {
   white-space: nowrap;
 }
 
-/* ABOUT */
+/* PAGINE ABOUT / WORKS */
 
-.about {
-  max-width: 600px;
-  margin: 100px auto;
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-  padding: 20px;
+  padding: 60px 30px;
+  box-sizing: border-box;
 }
 
-.about h1 {
+.page-logo {
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+.page h1 {
   font-size: 70px;
   letter-spacing: 6px;
+  margin-bottom: 40px;
 }
 
-.about p {
-  font-size: 22px;
-  line-height: 1.8;
+.quote {
+  max-width: 850px;
+  width: 100%;
+  font-size: 26px;
+  line-height: 1.7;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 /* CONTACT */
@@ -80,11 +99,17 @@ nav a {
 .contact {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 20px;
+  padding: 60px 30px;
+  box-sizing: border-box;
+}
+
+.contact-logo {
+  width: 200px;
+  margin-bottom: 30px;
 }
 
 .contact h1 {
@@ -96,37 +121,39 @@ nav a {
 .contact-text {
   margin-bottom: 20px;
   letter-spacing: 1px;
+  font-size: 22px;
 }
 
 .email {
   font-size: 30px;
   letter-spacing: 2px;
+  color: white;
+  text-decoration: none;
 }
 
-/* LOGO CONTACT */
+.socials {
+  margin-top: 40px;
+}
 
-.contact-logo {
-  width: 150px;
-  margin-bottom: 40px;
+.socials a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
 /* WORKS */
-
-.works {
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.works h1 {
-  letter-spacing: 4px;
-  margin-bottom: 60px;
-  font-size: 70px;
-}
 
 .works-grid {
   display: flex;
   flex-direction: column;
   gap: 80px;
+  align-items: center;
+}
+
+.works-grid p {
+  font-size: 36px;
+  letter-spacing: 4px;
 }
 
 .work-item {
@@ -139,20 +166,12 @@ nav a {
   width: 800px;
   height: 800px;
   max-width: 90%;
-}
-
-.work-item img:hover {
-  transform: scale(1.05);
-  opacity: 0.8;
+  object-fit: cover;
 }
 
 .work-item p {
   font-size: 42px;
   letter-spacing: 4px;
-}
-
-.work-item:first-child p {
-  margin-top: -30px;
 }
 
 /* INTRO */
@@ -201,124 +220,109 @@ nav a {
   100% { transform: scale(2); opacity: 0; }
 }
 
-/* SECTION */
-
-section {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding-top: 80px;
-}
-
 /* MOBILE */
 
 @media (max-width: 768px) {
 
   nav {
-    justify-content: center;
-    padding: 20px 10px;
+    justify-content: flex-start;
+    padding: 20px 18px;
   }
 
   nav div {
-    justify-content: center;
-    gap: 16px;
+    justify-content: flex-start;
+    gap: 20px;
   }
 
   nav a {
     font-size: 14px;
-    margin: 0;
+    letter-spacing: 1.5px;
   }
 
   .hero {
-    min-height: calc(100vh - 70px);
+    min-height: 100vh;
     padding-top: 0;
     justify-content: center;
-    transform: translateY(-35px);
   }
 
   .hero img {
-    width: 260px;
-    max-width: 75%;
+    width: 88%;
+    max-width: 360px;
   }
 
   .hero h1 {
     font-size: 34px;
     letter-spacing: 2px;
     white-space: nowrap;
-    margin-top: 25px;
+    margin-top: 20px;
   }
 
   .page {
-    min-height: calc(100vh - 70px);
-    justify-content: center;
-    padding: 20px 24px;
-    box-sizing: border-box;
-    transform: translateY(-25px);
+    justify-content: flex-start;
+    padding: 45px 28px;
   }
 
-  .page img,
-  .page-logo,
-  .contact-logo {
-    width: 190px;
-    max-width: 65%;
-    margin-bottom: 30px;
+  .page-logo {
+    width: 170px;
+    margin-bottom: 28px;
   }
 
-  .page h1,
-  .contact h1 {
-    font-size: 42px;
+  .page h1 {
+    font-size: 44px;
     letter-spacing: 4px;
     margin-bottom: 35px;
   }
 
   .quote {
     font-size: 20px;
-    line-height: 1.5;
+    line-height: 1.55;
     letter-spacing: 1px;
-    max-width: 100%;
+    padding: 0 18px;
   }
 
   .contact {
-    min-height: calc(100vh - 70px);
-    justify-content: center;
-    padding: 20px 24px;
-    box-sizing: border-box;
-    transform: translateY(-25px);
+    justify-content: flex-start;
+    padding: 45px 28px;
+  }
+
+  .contact-logo {
+    width: 170px;
+    margin-bottom: 28px;
+  }
+
+  .contact h1 {
+    font-size: 44px;
+    letter-spacing: 4px;
+    margin-bottom: 35px;
   }
 
   .contact-text {
     font-size: 16px;
-    margin-bottom: 25px;
   }
 
   .email {
     font-size: 22px;
     letter-spacing: 1px;
-    color: white;
-    text-decoration: none;
-  }
-
-  .socials {
-    margin-top: 35px;
   }
 
   .socials a {
     font-size: 16px;
   }
 
-  .works-grid {
-    gap: 60px;
+  .works-grid p {
+    font-size: 28px;
   }
 
   .work-item img {
-    width: 85%;
+    width: 90%;
     height: auto;
   }
 
   .work-item p {
-    font-size: 28px;
+    font-size: 30px;
   }
 }
+
+
+  
+
