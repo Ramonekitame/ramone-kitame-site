@@ -255,24 +255,27 @@ nav a {
   }
 
   .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 10px;
-  }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 0;
+  transform: translateY(-120px);
+}
 
-  .hero img {
-    width: 140%;
-    max-width: 620px;
-  }
+.hero img {
+  width: 140%;
+  max-width: none;
+  margin-bottom: -90px;
+}
 
-  .hero h1 {
-    font-size: 34px;
-    letter-spacing: 2px;
-    white-space: nowrap;
-    margin-top: -35px;
+.hero h1 {
+  font-size: 34px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  margin-top: 0;
+}
   }
 
   .page {
