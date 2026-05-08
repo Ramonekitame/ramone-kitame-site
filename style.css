@@ -260,12 +260,12 @@ nav a {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 90px;
+    padding-top: 60px;
   }
 
   .hero img {
-    width: 95%;
-    max-width: 420px;
+    width: 140%;
+    max-width: none;
   }
 
   .hero h1 {
