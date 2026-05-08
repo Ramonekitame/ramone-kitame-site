@@ -197,7 +197,12 @@ nav a {
   pointer-events: none;
 }
 
-.enter-img 
+.enter-img {
+  width: 260px;
+  max-width: 80%;
+  animation: float 4s ease-in-out infinite;
+}
+
 .intro-content {
   display: flex;
   flex-direction: column;
@@ -210,6 +215,8 @@ nav a {
   letter-spacing: 6px;
   color: white;
 }
+
+
 
 @keyframes float {
   0% { transform: translate(0,0) scale(1); }
