@@ -261,7 +261,7 @@ nav a {
   justify-content: flex-start;
   align-items: center;
   padding-top: 0;
-  transform: translateY(-120px);
+  transform: translateY(-20px);
 }
 
 .hero img {
@@ -354,4 +354,4 @@ nav a {
     margin-top: 20px;
   }
 
-}
+
