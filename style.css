@@ -197,9 +197,18 @@ nav a {
   pointer-events: none;
 }
 
-.enter-img {
-  width: 500px;
-  animation: float 4s ease-in-out infinite;
+.enter-img 
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.enter-text {
+  margin-top: 30px;
+  font-size: 28px;
+  letter-spacing: 6px;
+  color: white;
 }
 
 @keyframes float {
@@ -243,6 +252,8 @@ nav a {
     padding-top: 0;
     justify-content: center;
   }
+
+}
 
   .hero img {
     width: 95%;
@@ -320,8 +331,11 @@ nav a {
   .work-item p {
     font-size: 30px;
   }
+.enter-text {
+  font-size: 18px;
+  letter-spacing: 4px;
+  margin-top: 20px;
 }
-
 
   
 
