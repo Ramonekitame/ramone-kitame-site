@@ -344,5 +344,15 @@ nav a {
   margin-top: 20px;
 }
 
+.enter-img {
+  width: 420px;
+  max-width: none;
+}
+
+.enter-text {
+  font-size: 22px;
+  letter-spacing: 4px;
+}
+
   
 
