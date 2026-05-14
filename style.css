@@ -425,4 +425,33 @@ nav a {
     max-width: 1400px;
     height: auto;
 }
+@media (max-width: 768px) {
 
+  .works-carousel-section {
+    min-height: 55vh;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  .carousel-container img {
+    width: 95%;
+    max-width: 430px;
+  }
+
+  .arrow {
+    font-family: 'Trattatello', serif;
+    font-size: 90px;
+    top: 45%;
+    color: white;
+    opacity: 0.9;
+  }
+
+  .left {
+    left: 18px;
+  }
+
+  .right {
+    right: 18px;
+  }
+
+}
