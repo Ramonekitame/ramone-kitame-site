@@ -353,5 +353,76 @@ nav a {
     letter-spacing: 4px;
     margin-top: 20px;
   }
+.works-carousel-section {
+    width: 100%;
+    min-height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
 
+.carousel-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-container img {
+    width: 700px;
+    max-width: 85%;
+    height: auto;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.carousel-container img:hover {
+    transform: scale(1.01);
+}
+
+.arrow {
+    position: absolute;
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Trattatello', serif;
+    font-size: 110px;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.25s ease;
+    opacity: 0.75;
+    line-height: 1;
+}
+
+.arrow:hover {
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+.left {
+    left: 25px;
+}
+
+.right {
+    right: 25px;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.96);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.lightbox img {
+    width: 90%;
+    max-width: 1400px;
+    height: auto;
+}
 

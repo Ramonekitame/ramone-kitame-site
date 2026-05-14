@@ -23,10 +23,76 @@
 
   <h1>WORKS</h1>
 
-  <div class="works-grid">
-    <p>COMING SOON</p>
-  </div>
+  <section class="works-carousel-section">
+
+   <button class="arrow left" onclick="prevSlide()">←</button>
+    <div class="carousel-container">
+
+        <img id="carousel-image" src="cap-1.png" alt="work">
+
+    </div>
+
+    <button class="arrow right" onclick="nextSlide()">→</button>
+
 </section>
 
+<div class="lightbox" id="lightbox">
+    <img id="lightbox-img" src="">
+</div>
+</section>
+<script>
+
+const images = [
+  "cap-1.png",
+  "cap-2.png",
+  "cap-3.png",
+  "cap-4.png",
+  "cap-5.png",
+  "cap-6.png",
+  "cap-7.png",
+  "cap-8.png",
+  "cap-9.png",
+  "cap-10.png",
+  "cap-11.png"
+];
+
+let current = 0;
+
+const carouselImage = document.getElementById("carousel-image");
+
+function showImage() {
+    carouselImage.src = images[current];
+}
+
+function nextSlide() {
+    current++;
+
+    if(current >= images.length){
+        current = 0;
+    }
+
+    showImage();
+}
+
+function prevSlide() {
+    current--;
+
+    if(current < 0){
+        current = images.length - 1;
+    }
+
+    showImage();
+}
+
+carouselImage.addEventListener("click", () => {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = images[current];
+});
+
+document.getElementById("lightbox").addEventListener("click", () => {
+    document.getElementById("lightbox").style.display = "none";
+});
+
+</script>
 </body>
 </html>
